@@ -9,23 +9,33 @@
 // let total = 0;
 
 let input;
-const numbers = [];
-let total=0;
+const numbers = [ ];
+let total = 0;
+
+
+
 while(true){
-    input = prompt("Введите число");
-    
-    if (Number.isNaN(+input)){
-        alert('Было введено не число, попробуйте еще раз');
+     input = prompt("Введите число");
+
+     if (isNaN(input)) {
+         alert('Было введено не число, попробуйте еще раз');
         continue;
-    }
+     }
+     numbers.push(Number(input));
 
-    numbers.push(+input);
+     if (input === null){
 
-    if (input === null){
-        for(let number of numbers) {
-                        total += number;
-                    }
-                    console.log(`Общая сумма чисел равна ${total}`);
-                    break;
-                }
-            }
+        for ( const number of numbers){
+            total += number;
+        }
+        console.log(`Общая сумма чисел равна ${total}`);
+        break;
+     }
+    
+}
+
+
+
+
+
+
